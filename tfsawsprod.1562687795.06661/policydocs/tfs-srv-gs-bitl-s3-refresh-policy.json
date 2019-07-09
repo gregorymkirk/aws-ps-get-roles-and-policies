@@ -1,0 +1,48 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:ListBucket",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::tfsawsprod-prd-bitl-refresh",
+                "arn:aws:s3:::tfsawsprod-prd-bitl-refresh/*"
+            ],
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "s3:GetObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::tfsawssubprod-tst-bitl-refresh",
+                "arn:aws:s3:::tfsawssubprod-tst-bitl-refresh/*"
+            ],
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "s3:HeadBucket"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        },
+        {
+            "Sid": "Stmt1559928206868",
+            "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:GenerateDataKey",
+                "kms:ReEncrypt*"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:kms:us-east-1:009754696474:key/816b80ab-58e2-4c90-a2d4-0d339e195f64"
+        }
+    ]
+}

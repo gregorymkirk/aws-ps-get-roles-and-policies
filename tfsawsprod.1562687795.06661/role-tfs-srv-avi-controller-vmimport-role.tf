@@ -1,0 +1,14 @@
+resource "aws_iam_role" "tfs-srv-avi-controller-vmimport-role" {
+  name = "tfs-srv-avi-controller-vmimport-role"
+
+  #  permissions_boundary = "BOUNDARY"
+  assume_role_policy = <<EOF
+  "{"Version":"2012-10-17","Statement":[{"Sid":"","Effect":"Allow","Principal":{"Service":"vmie.amazonaws.com"},"Action":"sts:AssumeRole","Condition":{"StringEquals":{"sts:ExternalId":"tfs-srv-avi-controller-vmimport-role"}}}]}"
+  EOF
+
+  path = "/"
+}
+resource "aws_iam_role_policy_attachment" "tfs-srv-avi-controller-vmimport-role0" {
+  role       = "${aws_iam_role.tfs-srv-avi-controller-vmimport-role.id}"
+  policy_arn = "arn:aws:iam::865824340098:policy/tfs-srv-avi-vmimport-policy"
+}

@@ -1,0 +1,27 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "elasticfilesystem:*",
+                "rds:*Snapshot*",
+                "dlm:*",
+                "redshift:*Snapshot*",
+                "ec2:*Volume*",
+                "ec2:Describe*",
+                "glacier:*",
+                "s3:*",
+                "backup:*",
+                "tag:*",
+                "ec2:*Tag*",
+                "ec2:*Interface*",
+                "iam:PassRole",
+                "storagegateway:*",
+                "ec2:*Snapshot*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

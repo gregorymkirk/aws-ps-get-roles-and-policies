@@ -1,0 +1,39 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "aws-marketplace:*",
+                "autoscaling:*",
+                "ec2:*Snapshot*",
+                "ec2:*Volume*",
+                "ec2:*Tags",
+                "ec2:Describe*",
+                "ec2:*Interface*",
+                "iam:PassRole",
+                "config:*",
+                "tag:*",
+                "xray:*",
+                "ec2:*Image*",
+                "sns:*",
+                "states:*",
+                "ec2:*IamInstanceProfile*",
+                "iam:GetRole",
+                "trustedadvisor:*",
+                "health:*",
+                "elasticbeanstalk:*",
+                "cloudwatch:*",
+                "ssm:*",
+                "route53:*",
+                "lambda:*",
+                "ec2:*Instance*",
+                "servicecatalog:*",
+                "ec2:*LaunchTemplate*",
+                "datapipeline:*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

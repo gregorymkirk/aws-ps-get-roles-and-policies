@@ -1,0 +1,28 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "kms:ListKeyPolicies",
+                "kms:ListRetirableGrants",
+                "kms:GetKeyPolicy",
+                "s3:ListBucket",
+                "kms:ListResourceTags",
+                "elasticache:Describe*",
+                "kms:ListGrants",
+                "kms:GetParametersForImport",
+                "kms:ListKeys",
+                "s3:ListAllMyBuckets",
+                "elasticache:List*",
+                "cloudwatch:*",
+                "kms:GetKeyRotationStatus",
+                "kms:ListAliases",
+                "kms:DescribeKey",
+                "s3:HeadBucket"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
