@@ -1,3 +1,5 @@
+###  Create the managed policy from a file
+
 data "template_file" "NAME_policy_doc" {
   template = "${file("${path.module}/policydocs/POLICY_DOC")}"
 }
