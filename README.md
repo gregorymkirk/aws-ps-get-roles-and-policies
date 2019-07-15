@@ -18,11 +18,11 @@
 	4) The script is designed to exclude aws service roles, AWS managed policies, and the TFS core roles and policies.  The script also excludes user managed policies that are not used.
 
 ##Output
-	The script will create a directory named with the account alias to contain all the output files beneath the directory this is run in.
-	 Directory Structure:
-	 		--myawsaccount             (will contain terraform files for each role and managed policy found)
-	 		 	|--assumrolepolicydocs (will contain json files for the assume role policies)
-	 		 	|--inlinepolicydocs    (will containd json files for all inline policies )
-	 		 	|--managedpolicydocs   (will contains jsonfiles for each customer managed policy)
+	The script will create a directory named with the account alias to contain all the output files beneath the directory this is run in.\
+	 Directory Structure:\
+	 		--myawsaccount             (will contain terraform files for each role and managed policy found)\
+	 		 	|--assumrolepolicydocs (will contain json files for the assume role policies)\
+	 		 	|--inlinepolicydocs    (will containd json files for all inline policies )\
+	 		 	|--managedpolicydocs   (will contains jsonfiles for each customer managed policy)\
 
 
