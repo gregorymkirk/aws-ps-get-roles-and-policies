@@ -22,7 +22,7 @@ Function Out-UTF8NoBOM {
  
 }
 
- Add-Type -AssemblyName System.Web
+Add-Type -AssemblyName System.Web
 
 #if the direcotry already exists, rename it
 $epoch = get-date -Uformat %s
@@ -71,9 +71,9 @@ $roles|ForEach-Object {
         $assume =  [System.Web.HttpUtility]::UrlDecode($role.AssumeRolePolicyDocument)
         $rolename = $($_.RoleName).replace("+","-") # clean up the role name so terraform doesnt; reject it
         $assumerolepolicyfile = "$assumerolepolicypath\assume-$rolename.json"
-        # write out the assumje role policy to a file
+        # write out the assume role policy to a file
         Out-UTF8NoBOM -File $assumerolepolicyfile -Content $assume
-        #build ou the terraform code for the role.
+        #build out the terraform code for the role.
         $terraform = $roletf.replace("ROLE", $rolename).replace("ASSUME","assume-$rolename.json").replace("PATH",$role.path)
         $tf_file = "$codepath\role-$rolename.tf"
         write-host "ROLENAME: $($_.rolename)"
@@ -113,5 +113,3 @@ $roles|ForEach-Object {
     }
 }
     
-
-
